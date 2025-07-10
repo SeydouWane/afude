@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <title>Afudë - Accueil</title>
+</head>
+<body>
+
+    <!-- 🔘 Boutons principaux -->
+    <div>
+        <h1>Bienvenue sur Afudë</h1>
+        <a href="{{ url_for('public.trouver_famille') }}">
+            <button>Trouver ma Famille Hôte</button>
+        </a>
+        <a href="{{ url_for('public.inscription_famille') }}">
+            <button>S’inscrire en tant que Famille</button>
+        </a>
+    </div>
+
+    <hr>
+
+    <!-- 🌍 Présentation du Sénégal -->
+    <section>
+        <h2>Le Sénégal, terre de culture et d’hospitalité</h2>
+        <p>
+            Situé à l’extrême ouest de l’Afrique, le Sénégal est reconnu pour sa stabilité,
+            sa diversité culturelle et la légendaire hospitalité de ses habitants : la "teranga".
+        </p>
+        <p>
+            Du nord désertique aux forêts luxuriantes de Casamance, en passant par les villes historiques
+            comme Saint-Louis, Gorée ou Ziguinchor, chaque région possède une richesse unique.
+        </p>
+    </section>
+
+    <!-- 🎬 Vidéos culturelles (YouTube ou locales) -->
+    <section>
+        <h3>Découvrez le Sénégal en vidéo</h3>
+
+        <!-- Vidéo YouTube intégrée -->
+        <iframe width="560" height="315"
+            src="https://www.youtube.com/embed/1_bN6DmtNUo" 
+            title="Sénégal - Culture, diversité et accueil"
+            frameborder="0" allowfullscreen>
+        </iframe>
+
+        <br><br>
+
+        <!-- Vidéo locale (dans static/uploads/videos/) -->
+        <video width="560" height="315" controls>
+            <source src="{{ url_for('static', filename='uploads/videos/decouverte_casamance.mp4') }}" type="video/mp4">
+            Votre navigateur ne supporte pas la lecture de vidéos.
+        </video>
+    </section>
+
+</body>
+</html>
